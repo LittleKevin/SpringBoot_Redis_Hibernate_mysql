@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<!-- 包含头部信息用于适应不同设备 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+<link rel="stylesheet" type="text/css" href="css/demo-login.css">
+<title>用户登录</title>
+</head>
+<body ng-app="myLogin" >
+<div class="htmleaf-container">
+    <header class="htmleaf-header">
+        <h1>TASTE OF HAPPINESS<span>PINKOCCC HOME</span></h1>
+    </header>
+     <div ng-controller="LoginController" style="padding: 20px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                   <form  class="form-horizontal" >
+                       <span class="heading">用户登录</span>
+                       <div class="form-group">
+                       <input type="text" class="form-control" id="inputEmail3" placeholder="Account" ng-model="account">
+                           <i class="glyphicon glyphicon-user" style="color: rgb(181, 180, 180);"></i>
+                       </div>
+                       <div class="form-group ">
+                           <input type="password" class="form-control" id="inputPassword3" placeholder="Password" ng-model="password">
+                           <i class="glyphicon glyphicon-lock" style="color: rgb(181, 180, 180);"> </i>
+                           <a href="#" class="fa fa-question-circle"></a>
+                       </div>
+                       <div class="form-group">
+                           <div class="main-checkbox">
+                               <input type="checkbox" value="None" id="checkbox1" name="check"/>
+                               <label for="checkbox1"></label>
+                           </div>
+                           <span class="text">Remember me</span>
+                           <button type="submit" class="btn btn-default" ng-click="login()">登录</button>
+                       </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+<!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/controller/logincontroller.js"></script>
+</body>
+</html>
